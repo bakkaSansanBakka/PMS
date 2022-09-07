@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Lab2</string>
+    <string name="current_date">Текущая дата</string>
+    <string name="birth_date">Ваша дата рождения</string>
+    <string name="clear_button_value">Сбросить</string>
+    <string name="calculate_age_button_value">Рассчитать</string>
+    <string name="your_age_TextView">Ваш возраст составляет:</string>
+
+    <string-array name="timeFrames">
+        <item>дней</item>
+        <item>месяцев</item>
+        <item>недель</item>
+        <item>минут</item>
+    </string-array>
+</resources>
