@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Lab3</string>
+    <string-array name="coverTypes">
+        <item>Hard</item>
+        <item>Soft</item>
+    </string-array>
+    <string-array name="genres">
+        <item>Fantasy</item>
+        <item>Romance</item>
+        <item>Horror</item>
+        <item>Sci-fi</item>
+        <item>Humor</item>
+        <item>Detective</item>
+        <item>Historical</item>
+        <item>Adventure</item>
+    </string-array>
+    <string-array name="languages">
+        <item>English</item>
+        <item>Russian</item>
+        <item>Belarusian</item>
+        <item>French</item>
+        <item>Spanish</item>
+        <item>Italian</item>
+        <item>German</item>
+    </string-array>
+</resources>

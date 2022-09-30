@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/nameLabelFinalActivity"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.041" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/nameTextFieldFinalActivity"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/nameLabelFinalActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.115"
+        app:layout_constraintStart_toEndOf="@+id/nameLabelFinalActivity"
+        app:layout_constraintTop_toTopOf="@+id/nameLabelFinalActivity"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/authorLabelFinalActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Author"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.041" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/authorTextFieldFinalActivity"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/authorLabelFinalActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.779"
+        app:layout_constraintStart_toEndOf="@+id/authorLabelFinalActivity"
+        app:layout_constraintTop_toTopOf="@+id/authorLabelFinalActivity"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/publisherLabelFinalActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Publisher"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.024"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameLabelFinalActivity"
+        app:layout_constraintVertical_bias="0.035" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/publisherTextFieldFinalActivity"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/publisherLabelFinalActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toEndOf="@+id/publisherLabelFinalActivity"
+        app:layout_constraintTop_toTopOf="@+id/publisherLabelFinalActivity"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/priceLabelFinalActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price (USD)"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.594"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/authorLabelFinalActivity"
+        app:layout_constraintVertical_bias="0.032" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/priceTextFieldFinalActivity"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/priceLabelFinalActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/priceLabelFinalActivity"
+        app:layout_constraintTop_toTopOf="@+id/priceLabelFinalActivity" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/coverImageLabelFinalActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cover Image"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.025"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/publisherLabelFinalActivity"
+        app:layout_constraintVertical_bias="0.042" />
+
+    <ImageView
+        android:id="@+id/coverFinalActivityImageView"
+        android:layout_width="112dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.025"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coverImageLabelFinalActivity" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/coverTypeLabelFinalActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cover Type"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintStart_toEndOf="@+id/coverImageLabelFinalActivity"
+        app:layout_constraintTop_toBottomOf="@+id/publisherTextFieldFinalActivity"
+        app:layout_constraintVertical_bias="0.042" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/coverTypeTextFieldFinalActivity"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/coverTypeLabelFinalActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.254"
+        app:layout_constraintStart_toEndOf="@+id/coverTypeLabelFinalActivity"
+        app:layout_constraintTop_toTopOf="@+id/coverTypeLabelFinalActivity"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/languageTextFieldFinalActivity"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/languageLabelFinalActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.281"
+        app:layout_constraintStart_toEndOf="@+id/languageLabelFinalActivity"
+        app:layout_constraintTop_toTopOf="@+id/languageLabelFinalActivity"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/pagesNumberTextFieldFinalActivity"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/pagesNumberLabelFinalActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toEndOf="@+id/pagesNumberLabelFinalActivity"
+        app:layout_constraintTop_toTopOf="@+id/pagesNumberLabelFinalActivity"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/genreTextFieldFinalActivity"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/genreLabelFinalActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.347"
+        app:layout_constraintStart_toEndOf="@+id/genreLabelFinalActivity"
+        app:layout_constraintTop_toTopOf="@+id/genreLabelFinalActivity"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/genreLabelFinalActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Genre"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintStart_toEndOf="@+id/coverImageLabelFinalActivity"
+        app:layout_constraintTop_toBottomOf="@+id/coverTypeLabelFinalActivity"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/languageLabelFinalActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Language"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintStart_toEndOf="@+id/coverImageLabelFinalActivity"
+        app:layout_constraintTop_toBottomOf="@+id/genreLabelFinalActivity"
+        app:layout_constraintVertical_bias="0.026" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/pagesNumberLabelFinalActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number of pages"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintStart_toEndOf="@+id/coverImageLabelFinalActivity"
+        app:layout_constraintTop_toBottomOf="@+id/languageLabelFinalActivity"
+        app:layout_constraintVertical_bias="0.035" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/yearOfPublicationLabelFinalActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Year of publication"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.321"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pagesNumberLabelFinalActivity"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/yearOfPublicationTextFieldFinalActivity"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/yearOfPublicationLabelFinalActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintStart_toEndOf="@+id/yearOfPublicationLabelFinalActivity"
+        app:layout_constraintTop_toTopOf="@+id/yearOfPublicationLabelFinalActivity"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/goBackToThirdActivityButton"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Back"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/saveButton"
+        app:layout_constraintStart_toStartOf="parent"
+        style="?attr/materialButtonOutlinedStyle" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/saveButton"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Save"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.865"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
