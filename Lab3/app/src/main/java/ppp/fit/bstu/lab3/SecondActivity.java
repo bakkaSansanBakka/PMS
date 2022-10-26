@@ -18,9 +18,7 @@ import com.google.android.material.textview.MaterialTextView;
 public class SecondActivity extends AppCompatActivity {
     private Button backButton;
     private Button nextButton;
-    private Button selectImageButton;
 
-    private ImageView imageView;
     private AutoCompleteTextView coverTypeAutoCompleteTextView;
     private AutoCompleteTextView genreAutoCompleteTextView;
     private AutoCompleteTextView languageAutoCompleteTextView;
@@ -29,9 +27,6 @@ public class SecondActivity extends AppCompatActivity {
     MaterialTextView authorTextView;
     MaterialTextView publisherTextView;
     MaterialTextView priceTextView;
-
-    int SELECT_PICTURE = 200;
-    Uri selectedImageUri;
 
     private Comics comics;
 
@@ -61,7 +56,6 @@ public class SecondActivity extends AppCompatActivity {
         authorTextView = findViewById(R.id.authorTextFieldSecondActivity);
         publisherTextView = findViewById(R.id.publisherTextFieldSecondActivity);
         priceTextView = findViewById(R.id.priceTextFieldSecondActivity);
-        imageView = findViewById(R.id.imageView);
 
         comics = (Comics) getIntent().getSerializableExtra("ComicsItem");
 
@@ -71,16 +65,12 @@ public class SecondActivity extends AppCompatActivity {
         priceTextView.setText(Double.toString(comics.Price));
         if (comics.CoverType != null && !comics.CoverType.equals("")) {
             coverTypeAutoCompleteTextView.setText(comics.CoverType);
-            coverTypeAutoCompleteTextView.setAdapter(coverTypesArrayAdapter);
         }
         if (comics.Genre != null && !comics.Genre.equals("")) {
             genreAutoCompleteTextView.setText(comics.Genre);
         }
         if (comics.Language != null && !comics.Language.equals("")) {
             languageAutoCompleteTextView.setText(comics.Language);
-        }
-        if (comics.Cover != null && !comics.Cover.equals("")) {
-            imageView.setImageURI(Uri.parse(comics.Cover));
         }
 
         backButton = findViewById(R.id.goBackToFirstActivityButton);
@@ -90,11 +80,8 @@ public class SecondActivity extends AppCompatActivity {
                 comics.CoverType = coverTypeAutoCompleteTextView.getText().toString();
                 comics.Genre = genreAutoCompleteTextView.getText().toString();
                 comics.Language = languageAutoCompleteTextView.getText().toString();
-                if (selectedImageUri != null) {
-                    comics.Cover = selectedImageUri.toString();
-                }
 
-                Intent intent = new Intent(SecondActivity.this, MainActivity.class);
+                Intent intent = new Intent(SecondActivity.this, FirstActivity.class);
                 intent.putExtra("ComicsItem", comics);
 
                 startActivity(intent);
@@ -108,9 +95,6 @@ public class SecondActivity extends AppCompatActivity {
                 comics.CoverType = coverTypeAutoCompleteTextView.getText().toString();
                 comics.Genre = genreAutoCompleteTextView.getText().toString();
                 comics.Language = languageAutoCompleteTextView.getText().toString();
-                if (selectedImageUri != null) {
-                    comics.Cover = selectedImageUri.toString();
-                }
 
                 Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
                 intent.putExtra("ComicsItem", comics);
@@ -118,35 +102,5 @@ public class SecondActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        selectImageButton = findViewById(R.id.selectImageButton);
-        imageView = findViewById(R.id.imageView);
-        selectImageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                chooseImage();
-            }
-        });
-    }
-
-    void chooseImage() {
-        Intent i = new Intent();
-        i.setType("image/*");
-        i.setAction(Intent.ACTION_GET_CONTENT);
-
-        startActivityForResult(Intent.createChooser(i, "Select Picture"), SELECT_PICTURE);
-    }
-
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (resultCode == RESULT_OK) {
-            if (requestCode == SELECT_PICTURE) {
-                selectedImageUri = data.getData();
-                if (null != selectedImageUri) {
-                    imageView.setImageURI(selectedImageUri);
-                }
-            }
-        }
     }
 }

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar_layout"
+        layout="@layout/app_bar" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/isInStockTextViewDetailsActivity"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_layout" />
+
+    <ImageView
+        android:id="@+id/imageViewDetailsActivity"
+        android:layout_width="250dp"
+        android:layout_height="350dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/isInStockTextViewDetailsActivity"
+        app:layout_constraintVertical_bias="0.073" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/nameLabelDetailsActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewDetailsActivity"
+        app:layout_constraintVertical_bias="0.09" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/nameTextFieldDetailsActivity"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/nameLabelDetailsActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.809"
+        app:layout_constraintStart_toEndOf="@+id/nameLabelDetailsActivity"
+        app:layout_constraintTop_toTopOf="@+id/nameLabelDetailsActivity"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/priceLabelDetailsActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price (USD)"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameLabelDetailsActivity"
+        app:layout_constraintVertical_bias="0.037" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/priceTextFieldDetailsActivity"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/priceLabelDetailsActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.721"
+        app:layout_constraintStart_toEndOf="@+id/priceLabelDetailsActivity"
+        app:layout_constraintTop_toTopOf="@+id/priceLabelDetailsActivity"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/categoryLabelDetailsActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="304dp"
+        android:text="Category"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/priceLabelDetailsActivity"
+        app:layout_constraintVertical_bias="0.061" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/categoryTextFieldDetailsActivity"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/categoryLabelDetailsActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.766"
+        app:layout_constraintStart_toEndOf="@+id/categoryLabelDetailsActivity"
+        app:layout_constraintTop_toTopOf="@+id/categoryLabelDetailsActivity"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/editButton"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Edit"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

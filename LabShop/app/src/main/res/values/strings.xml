@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">LabShop</string>
+    <string-array name="categories">
+        <item>Dry Iron</item>
+        <item>Refrigerator</item>
+        <item>Washing Machine</item>
+        <item>Vacuum Cleaner</item>
+        <item>Fan</item>
+    </string-array>
+</resources>

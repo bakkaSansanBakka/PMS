@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar_layout"
+        layout="@layout/app_bar" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/selectImageButton"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Select image"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_layout"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <ImageView
+        android:id="@+id/imageViewSecondActivity"
+        android:layout_width="250dp"
+        android:layout_height="350dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectImageButton"
+        app:layout_constraintVertical_bias="0.328" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/goBackToFirstActivityButton"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Back"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/goToFinalActivityButton"
+        app:layout_constraintStart_toStartOf="parent"
+        style="?attr/materialButtonOutlinedStyle" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/goToFinalActivityButton"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Next"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.865"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

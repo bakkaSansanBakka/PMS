@@ -10,7 +10,6 @@ public class Comics implements Serializable {
     public String CoverType;
     public String Genre;
     public String Language;
-    public String Cover;
     public Integer PagesNumber;
     public Integer YearOfPublication;
 

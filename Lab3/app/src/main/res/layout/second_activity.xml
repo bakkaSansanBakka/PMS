@@ -108,16 +108,16 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/coverTypeDropdown"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:layout_width="150dp"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:hint="Cover Type"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/priceLabelSecondActivity"
-        app:layout_constraintVertical_bias="0.029">
+        app:layout_constraintVertical_bias="0.099">
 
         <AutoCompleteTextView
             android:id="@+id/coverTypeAutoCompleteTextView"
@@ -131,16 +131,16 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/genreDropdown"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:layout_width="150dp"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:hint="Genre"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/priceLabelSecondActivity"
-        app:layout_constraintVertical_bias="0.029">
+        app:layout_constraintTop_toBottomOf="@+id/coverTypeDropdown"
+        app:layout_constraintVertical_bias="0.061">
 
         <AutoCompleteTextView
             android:id="@+id/genreAutoCompleteTextView"
@@ -161,8 +161,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/coverTypeDropdown"
-        app:layout_constraintVertical_bias="0.025">
+        app:layout_constraintTop_toBottomOf="@+id/genreDropdown"
+        app:layout_constraintVertical_bias="0.075">
 
         <AutoCompleteTextView
             android:id="@+id/languageAutoCompleteTextView"
@@ -171,31 +171,6 @@
             android:inputType="none"
             android:text="Select" />
     </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/selectImageButton"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:text="Select Cover Image"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.063"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/languageDropdown"
-        app:layout_constraintVertical_bias="0.07" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="195dp"
-        android:layout_height="220dp"
-        android:src="@drawable/image_placeholder"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
-        app:layout_constraintStart_toEndOf="@+id/selectImageButton"
-        app:layout_constraintTop_toBottomOf="@+id/languageDropdown"
-        app:layout_constraintVertical_bias="0.188" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/goBackToFirstActivityButton"

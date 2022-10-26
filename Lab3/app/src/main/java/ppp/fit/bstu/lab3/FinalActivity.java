@@ -54,7 +54,6 @@ public class FinalActivity extends AppCompatActivity {
     private MaterialTextView languageTextView;
     private MaterialTextView pagesNumberTextView;
     private MaterialTextView yearOfPublicationTextView;
-    private ImageView coverImageView;
 
     private Comics comics;
 
@@ -70,7 +69,6 @@ public class FinalActivity extends AppCompatActivity {
         coverTypeTextView = findViewById(R.id.coverTypeTextFieldFinalActivity);
         genreTextView = findViewById(R.id.genreTextFieldFinalActivity);
         languageTextView = findViewById(R.id.languageTextFieldFinalActivity);
-        coverImageView = findViewById(R.id.coverFinalActivityImageView);
         pagesNumberTextView = findViewById(R.id.pagesNumberTextFieldFinalActivity);
         yearOfPublicationTextView = findViewById(R.id.yearOfPublicationTextFieldFinalActivity);
 
@@ -83,7 +81,6 @@ public class FinalActivity extends AppCompatActivity {
         coverTypeTextView.setText(comics.CoverType);
         genreTextView.setText(comics.Genre);
         languageTextView.setText(comics.Language);
-        coverImageView.setImageURI(Uri.parse(comics.Cover));
         pagesNumberTextView.setText(Integer.toString(comics.PagesNumber));
         yearOfPublicationTextView.setText(Integer.toString(comics.YearOfPublication));
 
@@ -109,6 +106,10 @@ public class FinalActivity extends AppCompatActivity {
 
                 String comicsArrayListJSONString = new Gson().toJson(comicsArrayList);
                 writeToFile(getApplicationContext(), comicsArrayListJSONString, fileName);
+
+                Intent intent = new Intent(FinalActivity.this, MainActivity.class);
+//                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivity(intent);
             }
         });
     }

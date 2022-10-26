@@ -25,7 +25,6 @@ public class ThirdActivity extends AppCompatActivity {
     private MaterialTextView coverTypeTextView;
     private MaterialTextView genreTextView;
     private MaterialTextView languageTextView;
-    private ImageView coverImageView;
     private TextInputLayout pagesNumberInput;
     private TextInputLayout yearOfPublicationInput;
 
@@ -43,7 +42,6 @@ public class ThirdActivity extends AppCompatActivity {
         coverTypeTextView = findViewById(R.id.coverTypeTextFieldThirdActivity);
         genreTextView = findViewById(R.id.genreTextFieldThirdActivity);
         languageTextView = findViewById(R.id.languageTextFieldThirdActivity);
-        coverImageView = findViewById(R.id.coverImageView);
         pagesNumberInput = findViewById(R.id.pagesNumberInput);
         yearOfPublicationInput = findViewById(R.id.yearOfPublicationInput);
 
@@ -56,7 +54,6 @@ public class ThirdActivity extends AppCompatActivity {
         coverTypeTextView.setText(comics.CoverType);
         genreTextView.setText(comics.Genre);
         languageTextView.setText(comics.Language);
-        coverImageView.setImageURI(Uri.parse(comics.Cover));
         if (comics.PagesNumber != null) {
             pagesNumberInput.getEditText().setText(Integer.toString(comics.PagesNumber));
         }

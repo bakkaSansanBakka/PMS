@@ -6,88 +6,47 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/nameInput"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="Name"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.239">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/authorInput"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="Author"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameInput"
-        app:layout_constraintVertical_bias="0.061">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/publisherInput"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="Publisher"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/authorInput"
-        app:layout_constraintVertical_bias="0.078">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/priceInput"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="Price (USD)"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/publisherInput"
-        app:layout_constraintVertical_bias="0.092">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/goToSecondActivityButton"
-        android:layout_width="150dp"
+        android:id="@+id/createNewComicsButton"
+        android:layout_width="60dp"
         android:layout_height="60dp"
-        android:text="Next"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="+"
         android:textAlignment="center"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/moreButton"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginStart="228dp"
+        android:layout_marginTop="16dp"
+        android:text="More"
+        android:textAlignment="center"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toEndOf="@+id/createNewComicsButton"
+        app:layout_constraintTop_toTopOf="parent"
+        style="?attr/materialButtonOutlinedStyle" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/comicsListView"
+        android:layout_width="match_parent"
+        android:layout_height="620dp"
+        app:layoutManager="LinearLayoutManager"
+        android:scrollbars="vertical"
+        android:scrollbarSize="1dp"
+        android:scrollbarThumbVertical="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+        app:layout_constraintTop_toBottomOf="@+id/createNewComicsButton"
+        app:layout_constraintVertical_bias="0.045"
+        android:layout_marginBottom="10dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
